@@ -18,6 +18,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'high_voltage'
 gem 'therubyracer', :platform=>:ruby
+gem 'grape'
 group :development do
   gem 'better_errors'
   gem 'capistrano', '~> 3.0.1'
