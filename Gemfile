@@ -19,6 +19,8 @@ gem 'devise'
 gem 'high_voltage'
 gem 'therubyracer', :platform=>:ruby
 gem 'grape'
+gem 'rack-contrib'
+
 group :development do
   gem 'better_errors'
   gem 'capistrano', '~> 3.0.1'
@@ -34,6 +36,9 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
+  gem 'rspec'
+  gem 'airborne'
+  gem 'pry'
 end
 group :test do
   gem 'capybara'

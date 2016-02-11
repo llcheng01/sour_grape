@@ -37,6 +37,11 @@ GEM
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
     addressable (2.4.0)
+    airborne (0.2.3)
+      activesupport (>= 3.0.0)
+      rack-test (~> 0.6, >= 0.6.2)
+      rest-client (~> 1.7, >= 1.7.3)
+      rspec (~> 3.1, >= 3.1.0)
     arel (6.0.3)
     autoprefixer-rails (6.3.1)
       execjs
@@ -104,6 +109,8 @@ GEM
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
     diff-lcs (1.2.5)
+    domain_name (0.5.20160128)
+      unf (>= 0.0.5, < 1.0.0)
     equalizer (0.0.11)
     erubis (2.7.0)
     execjs (2.6.0)
@@ -115,6 +122,7 @@ GEM
     faker (1.6.1)
       i18n (~> 0.5)
     ffi (1.9.10)
+    git-version-bump (0.15.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     grape (0.14.0)
@@ -129,6 +137,8 @@ GEM
       virtus (>= 1.0.0)
     hashie (3.4.3)
     high_voltage (2.4.0)
+    http-cookie (1.0.2)
+      domain_name (~> 0.5)
     i18n (0.7.0)
     ice_nine (0.11.1)
     jbuilder (2.4.0)
@@ -146,6 +156,7 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
+    method_source (0.8.2)
     mime-types (2.99)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
@@ -154,14 +165,22 @@ GEM
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (3.0.2)
+    netrc (0.11.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.4)
     rack-accept (0.4.5)
       rack (>= 0.4)
+    rack-contrib (1.4.0)
+      git-version-bump (~> 0.15)
+      rack (~> 1.4)
     rack-mount (0.8.3)
       rack (>= 1.0.0)
     rack-test (0.6.3)
@@ -195,6 +214,14 @@ GEM
     ref (2.0.0)
     responders (2.1.1)
       railties (>= 4.2.0, < 5.1)
+    rest-client (1.8.0)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 3.0)
+      netrc (~> 0.7)
+    rspec (3.4.0)
+      rspec-core (~> 3.4.0)
+      rspec-expectations (~> 3.4.0)
+      rspec-mocks (~> 3.4.0)
     rspec-core (3.4.2)
       rspec-support (~> 3.4.0)
     rspec-expectations (3.4.0)
@@ -225,6 +252,7 @@ GEM
       multi_json (~> 1.0)
       rubyzip (~> 1.0)
       websocket (~> 1.0)
+    slop (3.6.0)
     spring (1.6.3)
     spring-commands-rspec (1.0.4)
       spring (>= 0.9.1)
@@ -250,6 +278,9 @@ GEM
     uglifier (2.7.2)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.2)
     virtus (1.0.5)
       axiom-types (~> 0.1)
       coercible (~> 1.0)
@@ -270,6 +301,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  airborne
   better_errors
   bootstrap-sass
   byebug
@@ -289,9 +321,12 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   launchy
+  pry
   quiet_assets
+  rack-contrib
   rails (= 4.2.5)
   rails_layout
+  rspec
   rspec-rails
   sass-rails (~> 5.0)
   selenium-webdriver
